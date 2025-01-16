@@ -1,0 +1,681 @@
+<!DOCTYPE html><html lang="en"><head>
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+  
+    <title>Coin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Typescrips">
+    <meta name="author" content="coin">
+   
+       
+    
+    
+    
+    <style>
+  .ncontainerh {  
+      
+    display: flex;  
+    flex-direction: column;  
+     align-items: center;
+    justify-content: center;
+    
+     padding:30px;
+    border: 0.8px solid grey;
+    border-radius:45px;
+    background-color: transparent;
+    
+    
+    
+    color: grey;
+    font-size: 14px;
+    border-top: 25px solid grey;
+    border-bottom: 25px solid grey;
+    
+    
+}
+ 
+  .ncontainer {  
+    display: flex;  
+    flex-direction: row;  
+     padding:8px;
+    border: 0.8px solid grey;
+    border-radius:20px;
+    background-color: transparent;
+    height:60px;
+   
+    margin:14px;
+    margin-left:0px;
+    margin-right:0px;
+   
+    color: grey;
+    font-size: 14px;
+    
+    /*page2..*/
+} 
+  
+    
+    .ncontainer2 {  
+      
+    display: none;  
+    flex-direction: column;  
+     align-items: center;
+    justify-content: center;
+    
+     
+    border: px solid white;
+    
+    background-color: #2e2e2e;
+    height: 40%;
+    
+    border-start-start-radius: 10%;
+    border-start-end-radius: 10%;    
+    color: grey;
+    font-size: 14px;
+    border-top: 15px solid grey;
+    position: fixed;
+  bottom: 0%;
+    right: 0;
+     width: 100%; 
+}
+
+  .fixed2 {
+      display: flex;  
+    flex-direction: row;  
+      align-items: center;
+    justify-content: center;
+  position: fixed;
+  bottom: 0%;
+  right: 0;
+  
+  height: 60px;
+  border: 0px solid white;
+  border-radius:0px;
+  width: 102%;
+  background: #2e2e2e;
+ /* border-top: 0.1px solid grey;*/
+  
+}
+  
+  .bottom {  
+      
+    display: flex;  
+    flex-direction: column;  
+      align-items: center;
+    justify-content: center;
+    
+    padding:70px 2px;
+    border: 0.8px solid grey;
+    /*border-radius-right:45px;*/
+    background-color: grey;
+    
+    
+    color: white;
+    font-size: 14px;
+    border-top: 25px solid grey;
+    border-bottom: 25px solid grey;
+    
+    
+}
+  .buttomItems
+  {
+    display: flex;  
+    flex-direction: column;  
+      align-items: center;
+    justify-content: center;
+    
+    margin-left:6%;
+    
+    color:white;
+    height:70%;
+   
+    width: 40px;
+    background:transparent;border:0px;
+  }
+  .btmitem
+  {
+    border-radius:50%;border:0px solid #2e2e2e;background: grey;color: #2e2e2e;height:100%;width:100%;
+      
+  }
+  
+  /*Task*/
+  .ncontainerT {  
+    display: flex;  
+    flex-direction: row;  
+     padding:8px;
+    border: 0.8px solid grey;
+    border-radius:20px;
+    background-color: transparent;
+    
+    margin:14px;
+    margin-left:0px;
+    margin-right:0px;
+    color: grey;
+    font-size: 14px;
+    
+    
+    align-items: center;
+    justify-content: center;
+    
+   border-bottom:5px solid grey; 
+    
+} 
+ 
+   .bt
+  {
+    display:flex; font-size:15px; align-items: center; justify-content:center; border-radius: 15px; padding:5px 15px; background: #2e2e2e; border: 2px solid grey; color: white;
+     
+  }
+.dv1
+  {
+    display:flex;align-items: center; justify-content: center; border: 1px solid grey; border-radius:50%;width:60px;height:60px;
+        
+  }   
+  
+.dv2
+  {
+   color:#2e2e2e;font-size:25px; display:flex;align-items: center;justify-content: center;background-color: grey;  border-radius:50%;width:52px;height:52px;
+        
+  }   
+.dv3
+  {
+    padding-left: 6px;padding-right: 6px; width:60%; display:inline-flex; flex-direction: column;
+       
+  }     
+  
+  
+  /*Task*/
+  
+  /*page 3*/
+   .frame
+{
+  display: flex;  
+    flex-direction: column;  
+      align-items: center;
+    justify-content: center;
+    
+    
+    border: 0vh solid white;
+    border-radius:7vh;
+    background-color: #2e2e2e;
+    
+    
+    color: white;
+    font-size: 5vh;
+    border-top: 4vh solid white;
+    border-bottom: 4vh solid white;
+    margin-bottom: 20px;
+    
+  
+}
+.bt3
+{
+  display:block;
+  margin:1vh; 
+  width: 95%; 
+  border-radius: 90px;
+  font-size: 3vh;
+  padding: 2vh;
+}
+  
+  
+  
+  
+  
+  
+ 
+.bb{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --progress-bar-width: 200px;
+  --progress-bar-height: 200px;
+  --font-size: 2rem;
+}
+
+bbody {
+  height: 100vh;
+  background-color: #100c08;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  place-items: center;
+  gap: 2rem;
+}
+.circular-progress {
+  width: var(--progress-bar-width);
+  height: var(--progress-bar-height);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-circle {
+  position: absolute;
+  width: calc(var(--progress-bar-width) - 30px);
+  height: calc(var(--progress-bar-height) - 30px);
+  border-radius: 50%;
+  background-color: lightgrey;
+}
+
+.percentage {
+  position: relative;
+  font-size: var(--font-size);
+  color: rgb(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --progress-bar-width: 250px;
+    --progress-bar-height: 250px;
+    --font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --progress-bar-width: 220px;
+    --progress-bar-height: 220px;
+    --font-size: 2rem;
+  }
+}
+
+ 
+  
+  
+  
+  
+  
+  </style>
+    
+    
+
+</head>
+
+<body style="background:#2e2e2e;">
+  
+  
+  <div id="p1" style="display: block;"> 
+  <div  style=" color:grey; display:flex;align-items: center; height:70px;wjustify-content: start; border:0px;">
+         <div style="display:flex;align-items: center; justify-content: center; border: 1px solid grey; border-radius:50%;width:60px;height:60px;">
+
+          <div id="ic" style="color: #2e2e2e;font-size:30px; display:flex;align-items: center;justify-content: center;background-color: grey;  border-radius:50%;width:55px;height:55px;">ic</div>
+            
+         </div>
+    <div id="nm" style="margin-left:10px; font-size: 30px">
+    
+  </div>
+    
+    </div>
+    
+    <div  id="tc"style="color:grey;font-size:20; margin-left:50px;">Icid : tryrh53f6f   ICs : 0.0000008</div>
+    <div id="auto"style="color:grey; font-size:20; margin-left:50px;">Auto Farm : 0.0000008</div>
+    
+    <div id="main" style=" margin:10px; margin-bottom:70px"> 
+  <div  id="containerf" class="ncontainerh" style="margin-bottom: 10px;">
+    <!-- <div id="percentage"  style="height:200px;width:200px; background: transparent;border-radius:50%; border:0.5px solid grey;display: flex; flex-direction: column; align-items: center;justify-content: center; "> 
+         
+       </div>-->
+    <div class="circular-progress" data-inner-circle-color="#2e2e2e" data-percentage="86000" data-progress-color="grey" data-bg-color="darkgrey">
+  <div class="inner-circle"></div>
+  <p class="percentage">0%</p>
+</div>
+      farm bot working
+    </div>
+     
+  <div style="color:white;font-size:20px;">  
+    <div id="t16">t1t</div>
+     <div id="t1">t1</div>
+     <div id="t2"></div>
+     <div id="t3"></div>
+     <div id="t4"></div>
+     <div id="t5"></div>
+     <div id="t6"></div>
+     <div id="t7"></div>
+     <div id="t8"></div>
+    <div id="t9"></div>
+    
+  </div>
+  <!--HOME ENDS  -->
+  
+  
+  
+  
+
+    <div style="color:grey; font-size:30px;margin-top: 40px; margin-bottom: 20px;">
+            Why Movie coin?
+        </div>
+      
+    <div class="bottom" style="border-end-start-radius: 100px;  border-start-end-radius: 100px; margin-bottom: 100px;box-shadow: 10px 10px">
+        
+        <div style="color:#2e2e2e;  font-size:18px">
+           Unlike other platforms, Movie coin has no complex or hidden airdrop requirements. Just log in at least once in a month to keep your farm bot active and aquire coins as much as you can or as little as you wish. The sum of your farm coins and tasks coins is what will determine your airdrop and no cut off limit. You may however end up with a very tiny or insignificant airdrop if you do not participate in carrying out tasks. There will also be no gas fee or any pre-deposit requirement. Finally, we will not only share proceeds from ad revenue but we will also be investing revenue into our own businesses to make sure that you end up with fat airdrops. NOTE: Failure to log in atleast once every 30 days will reset your farm coins to zero. 
+      
+        </div>
+        
+    </div>
+
+       </div>
+    </div>
+  
+  
+  
+ <!--TASK STARTS  -->
+   
+   <task id="p2"style="display: none;margin-bottom: 100px"> >  
+     
+     
+     <!--
+     <div class="ncontainerT">
+<div class="dv1">
+  <div class="dv2">F</div>
+  </div>
+        <div class="dv3">
+          <div style=" font-size: 24px; ">Frens Invite </div>
+              <div>Invite frens to earn unlimited MCoins </div>
+           </div>
+          <button class="bt" onclick="showinvite();"> Go </button>
+     </div>
+   
+  
+   
+
+<div class="ncontainerT">
+<div class="dv1" >
+            <div class="dv2">Y</div>
+         </div>
+        <div class="dv3" >
+          <div style=" font-size: 24px; ">Youtube </div>
+              <div>Best movies part one </div>
+           </div>
+          <button class="bt" onclick="ShowYt();"> Go </button>
+     </div>
+   
+  
+  
+
+<div class="ncontainerT">
+<div class="dv1">
+            <div class="dv2" >YC</div>
+         </div>
+        <div class="dv3">
+          <div style=" font-size: 24px; ">YT Channel </div>
+              <div>Subscribe to YouTube channel to earn coins</div>
+           </div>
+          <button class="bt" onclick="ShowWebsite();"> Go </button>
+     </div>
+   
+  <div class="ncontainerT">
+<div class="dv1">
+            <div class="dv2" >TC</div>
+         </div>
+        <div class="dv3">
+          <div style=" font-size: 24px; ">TG Channel </div>
+              <div>Subscribe to Telegram channel to earn coins</div>
+           </div>
+          <button class="bt" onclick="ShowWebsite();"> Go </button>
+     </div>
+  
+  
+
+<div class="ncontainerT" style="margin-bottom: 100px">
+<div class="dv1">
+  <div class="dv2">M</div>
+         </div>
+        <div class="dv3">
+          <div style=" font-size: 24px; ">Mobile ads view </div>
+              <div>View ads to earn MCoins </div>
+           </div>
+          <button class="bt" onclick="ShowAd();"> Go </button>
+     </div>
+   -->
+     
+   </task>
+        
+        
+     <!--TASK ENDS  -->
+   
+    <best>
+ <div id="p3" style="display: none">     
+  <div id="p3content">
+  </div>
+  <div style="margin-bottom:8vh">
+    <button  style="border-radius:4vh;padding:2vh;font-size:4vh;width:49%;color: white;background: #2e2e2e;border:1px solid white;" onclick="prev(this);" >Previous</button>
+  <button  style="border-radius:4vh;padding:2vh;font-size:4vh;width:49%;color: #2e2e2e;background:white ;border:1px solid #2e2e2e;margin-bottom: 6vh" onclick="nex(this);" >Next</button>
+    </div>
+      </div>
+     </best>
+        
+
+
+  <debug style=" margin-bottom:100px"> 
+  <button onclick="del();">del 1</button>
+  <button onclick="cloud(1);">User 2</button>
+  <button onclick="cloud(2);">User 3</button>
+  <button onclick="cloud(3);">User 4</button>
+  <button onclick="cloud(4);">User 5</button>
+  <button onclick="cloud(5);">User 6</button>
+  <vw id="ff" style="display:flex;flex-direction: column;margin-bottom:100px ">
+    <obj> tttyy</obj>
+    <obj> ttty55y</obj>
+    
+  </vw>
+  </debug>
+  <script>
+  const nameOf = async(v) => (v).toString().replace(/[ |\(\)=>]/g,'').substring(5);
+  var u=[];// [u1,u2,u3,u4,u5,u6];
+  function user(autofarm,TaskCoins ,refId,ref,ask1,rwd,yts,signUpdt,activedt,lastLogindt)
+  { 
+    this.autofarm=autofarm;
+    this.TaskCoins=TaskCoins;
+    this.refId=refId;
+    this.ref=ref;
+    this.ask1=ask1;
+    this.rwd=rwd;
+    this.yts=yts;
+    this.signUpdt=signUpdt;
+    this.activedt=activedt;
+    this.lastLogindt= lastLogindt;  
+                         
+                               
+  }
+  async function  savedebug(key,value)
+{
+          try{
+  Telegram.WebApp.setHeaderColor('#2e2e2e');
+     let saver =JSON.stringify(uu);              
+Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
+                if (err) 
+                   {
+                     showAlert('Error: ' + err);
+                   } 
+           else {
+                    if (saved)
+                   {
+                        //bot 2 send msg
+                    }
+                    
+                }
+            });
+          } catch(err){ showAlert("Error saving : "+err);}
+    }
+  
+  function nu()
+  {
+   u[0]=new user(0,000000 ,'0gfuffffdh','0putrrgj','0ask',00,00,new Date("10/Dec/2024 20:30:00"),new Date("10/Dec/2024 20:30:00"),new Date("10/Dec/2024 20:30:00"));    
+    u[1]=new user(10,100000 ,'1gfuffffdh','1putrrgj','1ask',10,10,new Date("11/Dec/2024 20:30:00"),new Date("11/Dec/2024 20:30:00"),new Date("11/Dec/2024 20:30:00"));    
+    u[2]=new user(20,200000 ,'2gfuffffdh','2putrrgj','2ask',20,20,new Date("12/Dec/2024 20:30:00"),new Date("12/Dec/2024 20:30:00"),new Date("12/Dec/2024 20:30:00"));    
+    u[3]=new user(30,300000 ,'3gfuffffdh','3putrrgj','3ask',30,30,new Date("13/Dec/2024 20:30:00"),new Date("13/Dec/2024 20:30:00"),new Date("13/Dec/2024 20:30:00"));    
+    u[4]=new user(40,400000 ,'4gfuffffdh','4putrrgj','4ask',40,40,new Date("14/Dec/2024 20:30:00"),new Date("14/Dec/2024 20:30:00"),new Date("14/Dec/2024 20:30:00"));    
+    u[5]=new user(50,500000 ,'5gfuffffdh','5putrrgj','5ask',50,50,new Date("15/Dec/2024 20:30:00"),new Date("15/Dec/2024 20:30:00"),new Date("15/Dec/2024 20:30:00"));    
+    
+    u[6]=new user(60,300000 ,'','','6ask',60,60,new Date(),new Date(),new Date());    
+              
+    //alert('created');
+  }
+  var uu;
+  async function cloud(x){  
+    let c=JSON.stringify(u[x]);
+    await savedebug('data',c);
+     //alert(c.length.toString());
+    alert(c);
+    
+  }
+   //async function cloud(){ alert(await nameOf(()=>u[0].signUpdt) +'  '+  u1.signUpdt); }
+  async function  lditemsdebug() {
+            let res='';let save=false;
+                    Telegram.WebApp.CloudStorage.getItem("data2", function(err, value) {
+                            if (err) {
+                                showAlert('Error reading from cloud: ' + err);
+                                      //for (let i=0;i<keys.length;i++)save(keys[i],"z");
+                            } else {
+                        
+                       if(value.length<5){save=true; value= JSON.stringify(u[6]); alert("Welcome! You've been awarded 300,000 coins as a welcome bonus." ); }   
+    uu=JSON.parse(value);
+    uu.signUpdt =new Date(uu.signUpdt);
+    uu.activedt =new Date(uu.activedt);
+    uu.lastLogindt =new Date(uu.lastLogindt);
+    
+                         for(let prop in uu)
+                              { 
+                      if(uu[prop].toString().length >0){ }     
+                      else if(prop.toString()=="Task Coins"){ uu[prop]=0;}
+                      else if(prop.toString()=="refId"){ /*uu[prop]=getrefcode();*/}
+                      else if(prop.toString()=="ref"){/*uu[prop]="noref";*/}
+                      else if(prop.toString()=="ask1"){ /*uu[prop]="nil";*/}
+                      else if(prop.toString()=="rwd"){ uu[prop]=0;}
+                      else if(prop.toString()=="yts"){uu[prop]=0; }
+                      else if(prop.toString()=="signUpdt"){ uu[prop]=new Date();}
+                      else if(prop.toString()=="activedt"){ uu[prop]=new Date();}
+                      else if(prop.toString()=="lastLogindt"){ uu[prop]=new Date();}
+                                
+                           res=res+' <obj>' +prop +' = '+uu[prop]+'</obj>' ;       
+                         }
+                        document.getElementById('ff').innerHTML=res;
+        
+                            }
+                           
+                        });
+    
+                  if(save)savedebug();    
+        }
+  
+  
+  function getQuery(isref=false)
+{
+ //Params = new URLSearchParams(window.location.search);
+   let Params = Telegram.WebApp.initDataUnsafe.start_param;
+  Telegram.WebApp.sendData(Params);
+  alert(Params);
+           if(Params.includes('ask'))
+          {
+           let [p1,p2]=   Params.split("_") ;  
+ if(ask1 == p2)  
+           {
+              //Award() ;     
+           }                               
+          }
+        else if(Params.includes('ref' && uu.ref.length < 4))
+  {
+    let refcode=Params.split('_')[1];
+    //save('ref',refcode);
+    //send bot msg
+    
+    let code=getrefcode();
+    uu.ref= refcode;
+    uu.refId= code;
+     Telegram.WebApp.sendData(code+'===='+refcode+'             Your referral link is : t.me/moviecoin/'+code);
+     savedebug();                          
+  }  else{if (isref)uu.ref='noref' ;}
+        
+}
+  
+  
+  function del(){
+  Telegram.WebApp.CloudStorage.removeItem('data', function(err, deleted) {
+                if (err) {
+                  alert('Error: ' + err);
+                } else {
+                    if (deleted) {alert('deleted');return; }
+                      
+                }
+  });
+  
+}
+  
+  nu();
+ lditemsdebug();
+  const tmer2getQuery =setTimeout(getQuery, 2000);
+
+  </script>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+<div class="fixed2">
+    <button id="p1b"  onclick="pageld(this);" class="buttomItems" style="margin-left:0px;" >
+        <img src="p3.webp"  class="btmitem">
+      <span style="font-size:9px; ">Home</span>
+      
+    </button>
+  <button id="p2b" onclick="pageld(this);"  class="buttomItems" >
+    <img src="p2.webp" class="btmitem" >
+    <span style="font-size:9px">Best</span>
+   </button>
+    <button id="p3b"  onclick="pageld(this);"  class="buttomItems">
+    <img src="p3.webp" class="btmitem">
+    <span style="font-size:9px">All</span>  
+    </button>
+    </button>
+       <button id="p5b"  onclick="pageld(this);"  class="buttomItems" >
+       <img src="p5.webp" class="btmitem">
+         <span style="font-size:9px">Pages</span>
+        </button> 
+     <button id="p4b"  onclick="pageld(this);"  class="buttomItems" > 
+    <img src="p1.webp" class="btmitem">
+       <span style="font-size:9px">Task</span>
+       
+  </div>
+
+<!--POPUP  -->
+<div id="ppp" class="ncontainer2">
+  <div style="position: absolute;  top: 10px;justify-content: center ;color: grey; font-size: 30px;">Movie Coin</div>
+  <div id="c12" onclick="closePopUp();" style="  position: absolute;  top: 10px; right: 15px; color: white; font-size: 30px;  text-decoration: none;">x</div>
+  <div id="pop" style="display:flex;flex-direction: column;  
+     align-items: center;width:94%;
+    justify-content: center;font-size:20px;margin-bottom:40px;"> 
+    
+    <!--
+   <input id="s23"  multiple="true" style="background: transparent;color:white;z-index:8; margin-top:0px; border-radius:10px;width:100%;padding:10px;border:1px solid red;font-size:15px;"placeholder="Enter text"> 
+    <input id="outlined2"  multiple="true" style="background: transparent;color:white;z-index:8;margin-top:10px;  border-radius:10px;width:100%;padding:10px;border:1px solid red;font-size:15px;"placeholder="Enter text"> 
+     -->
+   
+  </div>
+  <div style="margin-top:6px;width:98%;position:absolute;bottom: 5px">
+   <button  onclick="HandleTask(this);" id="bt1" style="margin-top:6px;z-index:2; background: #2e2e2e; border:1px solid grey; border-radius:20px;color: grey;width:100%; padding:10px; ">Click me</button>
+    <button onclick="HandleTask(this);" id="bt2" style=" z-index:3; margin-top:6px; background: grey; border:1px solid #2e2e2e; border-radius:20px;color:#2e2e2e;width:100%; padding:10px; ">Click me</button>
+  </div>
+  
+  
+  
+</div>
+
+    
+  <script src="tr.js" type="text/javascript"></script>
+  
+</html>
+  
+  
