@@ -367,73 +367,7 @@ bbody {
  <!--TASK STARTS  -->
    
    <task id="p2"style="display: none;margin-bottom: 100px"> >  
-     
-     
-     <!--
-     <div class="ncontainerT">
-<div class="dv1">
-  <div class="dv2">F</div>
-  </div>
-        <div class="dv3">
-          <div style=" font-size: 24px; ">Frens Invite </div>
-              <div>Invite frens to earn unlimited MCoins </div>
-           </div>
-          <button class="bt" onclick="showinvite();"> Go </button>
-     </div>
-   
   
-   
-
-<div class="ncontainerT">
-<div class="dv1" >
-            <div class="dv2">Y</div>
-         </div>
-        <div class="dv3" >
-          <div style=" font-size: 24px; ">Youtube </div>
-              <div>Best movies part one </div>
-           </div>
-          <button class="bt" onclick="ShowYt();"> Go </button>
-     </div>
-   
-  
-  
-
-<div class="ncontainerT">
-<div class="dv1">
-            <div class="dv2" >YC</div>
-         </div>
-        <div class="dv3">
-          <div style=" font-size: 24px; ">YT Channel </div>
-              <div>Subscribe to YouTube channel to earn coins</div>
-           </div>
-          <button class="bt" onclick="ShowWebsite();"> Go </button>
-     </div>
-   
-  <div class="ncontainerT">
-<div class="dv1">
-            <div class="dv2" >TC</div>
-         </div>
-        <div class="dv3">
-          <div style=" font-size: 24px; ">TG Channel </div>
-              <div>Subscribe to Telegram channel to earn coins</div>
-           </div>
-          <button class="bt" onclick="ShowWebsite();"> Go </button>
-     </div>
-  
-  
-
-<div class="ncontainerT" style="margin-bottom: 100px">
-<div class="dv1">
-  <div class="dv2">M</div>
-         </div>
-        <div class="dv3">
-          <div style=" font-size: 24px; ">Mobile ads view </div>
-              <div>View ads to earn MCoins </div>
-           </div>
-          <button class="bt" onclick="ShowAd();"> Go </button>
-     </div>
-   -->
-     
    </task>
         
         
@@ -459,7 +393,7 @@ bbody {
   <button onclick="cloud(3);">User 4</button>
   <button onclick="cloud(4);">User 5</button>
   <button onclick="cloud(5);">User 6</button>
-  <vw id="ff" style="display:flex;flex-direction: column;margin-bottom:100px ">
+  <vw id="ff" style="display:flex;flex-direction: column;margin-bottom:100px;color:grey;">
     <obj> tttyy</obj>
     <obj> ttty55y</obj>
     
@@ -563,7 +497,8 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
                            
                         });
     
-                  if(save)savedebug();    
+                  if(save)setTimeout( savedebug,5000);   
+    
         }
   
   
