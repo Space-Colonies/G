@@ -537,7 +537,18 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
      
           savedebug();   
 }
-  
+  var en='KeWoVaQn5x';
+function getrefcode()
+{   let n='',id2=window.Telegram.WebApp.initDataUnsafe.user.id;
+         // alert(id2);
+  for(let i=0;i<id2.length;i++)
+    {
+   n=n+ en[id2[i]];
+    }
+    //alert(rfc);
+         return n;
+}
+
   
   function deldebug(){
     
