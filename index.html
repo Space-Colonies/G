@@ -493,8 +493,8 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
                            res=res+' <obj>' +prop +' = '+uu[prop]+'</obj>' ;       
                          }
                         document.getElementById('ff').innerHTML=res;
-                  if(save){setTimeout( savedebug,5000);   alert(save.toString());}
-    
+                  //if(save){setTimeout( savedebug,5000);   alert(save.toString());}
+                       getQuery();
                             }
                            
                         });
@@ -506,12 +506,13 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
   function getQuery(isref=false)
 {
  //Params = new URLSearchParams(window.location.search);
-   let Params = Telegram.WebApp.initDataUnsafe.start_param;
-  Telegram.WebApp.sendData(Params);
+   try{
+  let Params = Telegram.WebApp.initDataUnsafe.start_param;
+  
   alert(Params);
            if(Params.includes('ask'))
           {
-           let [p1,p2]=   Params.split("_") ;  
+           let [p1,p2]= Params.split("_") ;  
  if(ask1 == p2)  
            {
               //Award() ;     
@@ -526,11 +527,15 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
     let code=getrefcode();
     uu.ref= refcode;
     uu.refId= code;
-    savedebug();
+    
      Telegram.WebApp.sendData(code+'===='+refcode );
                                
   }  else{if (isref)uu.ref='noref' ;}
-        
+   }catch(x){alert(x);}
+  if(uu.refId.length<3)uu.refId=getrefcode();
+  uu.lastLogindt=new Date();    
+     
+          savedebug();   
 }
   
   
