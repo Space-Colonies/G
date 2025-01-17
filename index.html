@@ -399,176 +399,7 @@ bbody {
     
   </vw>
   </debug>
-  <script>
-  const nameOf = async(v) => (v).toString().replace(/[ |\(\)=>]/g,'').substring(5);
-  var u=[];// [u1,u2,u3,u4,u5,u6];
-  function user(autofarm,TaskCoins ,refId,ref,ask1,rwd,yts,signUpdt,activedt,lastLogindt)
-  { 
-    this.autofarm=autofarm;
-    this.TaskCoins=TaskCoins;
-    this.refId=refId;
-    this.ref=ref;
-    this.ask1=ask1;
-    this.rwd=rwd;
-    this.yts=yts;
-    this.signUpdt=signUpdt;
-    this.activedt=activedt;
-    this.lastLogindt= lastLogindt;  
-                         
-                               
-  }
-  async function  savedebug(key,value)
-{
-          try{
-  Telegram.WebApp.setHeaderColor('#2e2e2e');
-     let saver ="";
-            try{saver=JSON.stringify(uu); }catch(x){alert(x);}           
-Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
-                if (err) 
-                   {
-                     alert('Error: ' + err);
-                   } 
-           else {
-                    if (saved)
-                   {
-                       alert('saved'); //bot 2 send msg
-                    }
-                    
-                }
-            });
-          } catch(err){ showAlert("Error saving : "+err);}
-    }
   
-  function nu()
-  {
-   u[0]=new user(0,000000 ,'0gfuffffdh','0putrrgj','0ask',00,00,new Date("10/Dec/2024 20:30:00"),new Date("10/Dec/2024 20:30:00"),new Date("10/Dec/2024 20:30:00"));    
-    u[1]=new user(10,100000 ,'1gfuffffdh','1putrrgj','1ask',10,10,new Date("11/Dec/2024 20:30:00"),new Date("11/Dec/2024 20:30:00"),new Date("11/Dec/2024 20:30:00"));    
-    u[2]=new user(20,200000 ,'2gfuffffdh','2putrrgj','2ask',20,20,new Date("12/Dec/2024 20:30:00"),new Date("12/Dec/2024 20:30:00"),new Date("12/Dec/2024 20:30:00"));    
-    u[3]=new user(30,300000 ,'3gfuffffdh','3putrrgj','3ask',30,30,new Date("13/Dec/2024 20:30:00"),new Date("13/Dec/2024 20:30:00"),new Date("13/Dec/2024 20:30:00"));    
-    u[4]=new user(40,400000 ,'4gfuffffdh','4putrrgj','4ask',40,40,new Date("14/Dec/2024 20:30:00"),new Date("14/Dec/2024 20:30:00"),new Date("14/Dec/2024 20:30:00"));    
-    u[5]=new user(50,500000 ,'5gfuffffdh','5putrrgj','5ask',50,50,new Date("15/Dec/2024 20:30:00"),new Date("15/Dec/2024 20:30:00"),new Date("15/Dec/2024 20:30:00"));    
-    
-    u[6]=new user(60,300000 ,'','','6ask',60,60,new Date(),new Date(),new Date());    
-              
-    //alert('created');
-  }
-  var uu;
-  async function cloud(x){  
-    uu=u[x];savedebug();
-    //let c=JSON.stringify(u[x]);
-    //await savedebug('data2',c);
-     //alert(c.length.toString());
-    //alert(c);
-    
-  }
-   //async function cloud(){ alert(await nameOf(()=>u[0].signUpdt) +'  '+  u1.signUpdt); }
-  async function  lditemsdebug() {
-            let res='';
-                    Telegram.WebApp.CloudStorage.getItem("data2", function(err, value) {
-                      let save=false;
-                            if (err) {
-                                showAlert('Error reading from cloud: ' + err);
-                                      //for (let i=0;i<keys.length;i++)save(keys[i],"z");
-                            } else {
-                        
-                       if(value.length<5){save=true; value= JSON.stringify(u[6]); alert("Welcome! You've been awarded 300,000 coins as a welcome bonus." ); }   
-    uu=JSON.parse(value);
-    uu.signUpdt =new Date(uu.signUpdt);
-    uu.activedt =new Date(uu.activedt);
-    uu.lastLogindt =new Date(uu.lastLogindt);
-    
-                         for(let prop in uu)
-                              { 
-                      if(uu[prop].toString().length >0){ }     
-                      else if(prop.toString()=="Task Coins"){ uu[prop]=0;}
-                      else if(prop.toString()=="refId"){ /*uu[prop]=getrefcode();*/}
-                      else if(prop.toString()=="ref"){/*uu[prop]="noref";*/}
-                      else if(prop.toString()=="ask1"){ /*uu[prop]="nil";*/}
-                      else if(prop.toString()=="rwd"){ uu[prop]=0;}
-                      else if(prop.toString()=="yts"){uu[prop]=0; }
-                      else if(prop.toString()=="signUpdt"){ uu[prop]=new Date();}
-                      else if(prop.toString()=="activedt"){ uu[prop]=new Date();}
-                      else if(prop.toString()=="lastLogindt"){ uu[prop]=new Date();}
-                                
-                           res=res+' <obj>' +prop +' = '+uu[prop]+'</obj>' ;       
-                         }
-                        document.getElementById('ff').innerHTML=res;
-                  //if(save){setTimeout( savedebug,5000);   alert(save.toString());}
-                       getQuery();
-                            }
-                           
-                        });
-    
-                  
-        }
-  
-  
-  function getQuery(isref=false)
-{
- //Params = new URLSearchParams(window.location.search);
-   try{
-  let Params = Telegram.WebApp.initDataUnsafe.start_param;
-  
-  alert(Params);
-           if(Params.includes('ask'))
-          {
-           let [p1,p2]= Params.split("_") ;  
- if(ask1 == p2)  
-           {
-              //Award() ;     
-           }                               
-          }
-        else if(Params.includes('ref' && uu.ref.length < 4))
-  {
-    let refcode=Params.split('_')[1];
-    //save('ref',refcode);
-    //send bot msg
-    
-    let code=getrefcode();
-    uu.ref= refcode;
-    uu.refId= code;
-    
-     Telegram.WebApp.sendData(code+'===='+refcode );
-                               
-  }  else{if (isref)uu.ref='noref' ;}
-   }catch(x){alert(x);}
-  if(uu.refId.length<3)uu.refId=getrefcode();
-  uu.lastLogindt=new Date();    
-     
-          savedebug();   
-}
-  var en='KeWoVaQn5x';
-function getrefcode()
-{   let n='',id2= window.Telegram.WebApp.initDataUnsafe.user.id.toString();
-        alert(id2);
-  for(let i=0;i<id2.length;i++)
-    {
-   n=n+ en[id2[i]];
-    }
-    //alert(rfc);
-         return n;
-}
-
-  
-  function deldebug(){
-    
-    
-  Telegram.WebApp.CloudStorage.removeItem('data2', function(err, deleted) {
-                if (err) {
-                  alert('Error: ' + err);
-                } else {
-                    if (deleted) {alert('deleted');return; }
-                      
-                }
-  });
-  
-}
-  
-  nu();
- lditemsdebug();
- // const tmer2getQuery =setTimeout(getQuery, 2000);
-
-  </script>
 
   
   
@@ -584,25 +415,25 @@ function getrefcode()
 </body>
 <div class="fixed2">
     <button id="p1b"  onclick="pageld(this);" class="buttomItems" style="margin-left:0px;" >
-        <img src="p3.webp"  class="btmitem">
+        <img src="F1.svg"  class="btmitem">
       <span style="font-size:9px; ">Home</span>
       
     </button>
   <button id="p2b" onclick="pageld(this);"  class="buttomItems" >
-    <img src="p2.webp" class="btmitem" >
-    <span style="font-size:9px">Best</span>
+    <img src="F2.svg" class="btmitem" >
+    <span style="font-size:9px">Selected</span>
    </button>
     <button id="p3b"  onclick="pageld(this);"  class="buttomItems">
-    <img src="p3.webp" class="btmitem">
+    <img src="F3.svg" class="btmitem">
     <span style="font-size:9px">All</span>  
     </button>
     </button>
        <button id="p5b"  onclick="pageld(this);"  class="buttomItems" >
-       <img src="p5.webp" class="btmitem">
+       <img src="F4.svg" class="btmitem">
          <span style="font-size:9px">Pages</span>
         </button> 
      <button id="p4b"  onclick="pageld(this);"  class="buttomItems" > 
-    <img src="p1.webp" class="btmitem">
+    <img src="F5.svg" class="btmitem">
        <span style="font-size:9px">Task</span>
        
   </div>
