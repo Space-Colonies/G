@@ -92,7 +92,10 @@
   
   height: 60px;
   border: 0px solid white;
-  border-radius:0px;
+ /* border-radius:0px;*/
+    border-top:1px solid white;
+  border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
   width: 102%;
   background: #2e2e2e;
  /* border-top: 0.1px solid grey;*/
@@ -221,7 +224,7 @@
 }
   
   
-  
+  a {display:inline; text-align: center; background:grey;color: #2e2e2e; border:1px solid white;font-size:3vh; border-radius:2vh; padding:2vh; width:100%;margin:20px;}
   
   
   
@@ -296,7 +299,7 @@ bbody {
 
 </head>
 
-<body style="background:#2e2e2e;">
+<body style="background: #2e2e2e;">
   
   
   <div id="p1" style="display: block;"> 
@@ -353,7 +356,7 @@ bbody {
     <div class="bottom" style="border-end-start-radius: 100px;  border-start-end-radius: 100px; margin-bottom: 100px;box-shadow: 10px 10px">
         
         <div style="color:#2e2e2e;  font-size:18px">
-           Unlike other platforms, Movie coin has no complex or hidden airdrop requirements. Just log in at least once in a month to keep your farm bot active and aquire coins as much as you can or as little as you wish. The sum of your farm coins and tasks coins is what will determine your airdrop and no cut off limit. You may however end up with a very tiny or insignificant airdrop if you do not participate in carrying out tasks. There will also be no gas fee or any pre-deposit requirement. Finally, we will not only share proceeds from ad revenue but we will also be investing revenue into our own businesses to make sure that you end up with fat airdrops. NOTE: Failure to log in atleast once every 30 days will reset your farm coins to zero. 
+          <p>Movie coin has come to change the game in the memecoin industry by using innovative approach that will make you have fun while earning crypto reward. We understand that time is important so we do not want to take much of your time by making some timeline logging criteria or asking you to play some boring game or watching some lengthy Youtube movies. Instead we provide mobile ads which you can watch anytime for just a few seconds and spend the rest of your day doing what you like or watching some of the best movies that the community will be suggesting. We will always try to outsource movies from various third party websites for your watching pleasure.  </p><p> Unlike other platforms, Movie coin has no complex or hidden airdrop requirements aimed deliberately to reduce the number of qualified users. Just watch at least one mobile ad in a month to keep your farm bot active. The sum of your bot coins and tasks coins is what will determine your airdrop and no cut off limit. You may however end up with a very tiny or insignificant airdrop if you do not participate in carrying out tasks. There will also be no gas fee or any pre-deposit requirement. Finally, we will not only share proceeds from ad revenue but we will also be investing revenue into our own businesses to make sure that you end up with fat airdrops. NOTE: Failure to log in atleast once every 30 days will reset your bot coins to zero. </p>
       
         </div>
         
@@ -419,6 +422,11 @@ bbody {
       <span style="font-size:9px; ">Home</span>
       
     </button>
+  <button id="p4b"  onclick="pageld(this);"  class="buttomItems" > 
+    <img src="F5.svg" class="btmitem">
+       <span style="font-size:9px">Task</span>
+        </button>
+  
   <button id="p2b" onclick="pageld(this);"  class="buttomItems" >
     <img src="F2.svg" class="btmitem" >
     <span style="font-size:9px">Selected</span>
@@ -427,15 +435,12 @@ bbody {
     <img src="F3.svg" class="btmitem">
     <span style="font-size:9px">All</span>  
     </button>
-    </button>
+   
        <button id="p5b"  onclick="pageld(this);"  class="buttomItems" >
-       <img src="F4.svg" class="btmitem">
+       <img src="F42.svg" class="btmitem">
          <span style="font-size:9px">Pages</span>
         </button> 
-     <button id="p4b"  onclick="pageld(this);"  class="buttomItems" > 
-    <img src="F5.svg" class="btmitem">
-       <span style="font-size:9px">Task</span>
-       
+     
   </div>
 
 <!--POPUP  -->
@@ -452,7 +457,8 @@ bbody {
      -->
    
   </div>
-  <div style="margin-top:6px;width:98%;position:absolute;bottom: 5px">
+  <div id="btmbtn" style=" display:flex;flex-direction: column;  
+     align-items: center;  margin:6px;width:100%; position:absolute; bottom: 5px">
    <button  onclick="HandleTask(this);" id="bt1" style="margin-top:6px;z-index:2; background: #2e2e2e; border:1px solid grey; border-radius:20px;color: grey;width:100%; padding:10px; ">Click me</button>
     <button onclick="HandleTask(this);" id="bt2" style=" z-index:3; margin-top:6px; background: grey; border:1px solid #2e2e2e; border-radius:20px;color:#2e2e2e;width:100%; padding:10px; ">Click me</button>
   </div>
@@ -464,6 +470,17 @@ bbody {
     
   <script src="tr.js" type="text/javascript"></script>
   
+<div id="ppp2" class="ncontainer2">
+  <div style="position: absolute;  top: 10px;justify-content: center ;color: grey; font-size: 30px;">Movie Coin</div>
+ 
+  <div id="link"style="margin-top:6px;width:98%;position:absolute;bottom: 5px">
+    <a href='intent://mc2025.mc#Intent;scheme=mc;package=com.mcgames.mcapp;end'> Watch ad now</a>
+            
+     </div>
+  
+  
+  
+</div>
 </html>
   
   
