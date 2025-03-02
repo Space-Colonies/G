@@ -182,12 +182,8 @@ function ShowAd(e)
 {
      TaskToHandle= 2;TaskId="";
     msg="Watch ads to get 100,000 coin per ad. If you don't have our game installed already, you will have to download and install it MCoin app first which will give you access to download our game and earn 2,000,000 coins for first time installation of the game after you watch your first ad.";
-  /*uu.rwd= fname;*/ let str=  JSON.stringify(uu);
-        
-    let st="<a href='intent://mc2025.mc/mbadsd_"+ str +"#Intent;scheme=mc;package=com.mcgames.mcapp;end'>  Watch mobile ad now </a>";
-           
-  document.getElementById("btmbtn").innerHTML=st;
   
+      
   document.getElementById('pop').innerHTML =msg;
           ppp.style.height= '90%';     
     ppp.style.display= "flex";       
@@ -242,17 +238,16 @@ function HandleTask(e)
    else if(TaskToHandle==2)
           { 
                     ppp.style.display= "none";
-        u[0].rwd= 'Sani'; let str=  JSON.stringify(u[0]);
-            let st="<a href='intent://mc2025.mc/mbadsd_"+ str +"#Intent;scheme=mc;package=com.mcgames.mcapp;end'> Watch ad now</a>";
+       // u[0].rwd= 'Sani'; let str=  JSON.stringify(u[0]);
+           uu.rwd= fname; let str=  JSON.stringify(uu);
+         
+            let st="intent://mc2025.mc/mbadsd_"+ str +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
             //let st="<a href='intent://mc2025.mc/ytvid#Intent;scheme=mc;package=com.mcgames.mcapp;end'> Watch ad now</a>";
-      
-            document.getElementById('link').innerHTML =st;
-            ppp2.style.display= "block";
-           document.getElementById("btmbtn").innerHTML= '<button  onclick="HandleTask(this);" id="bt1" style="margin-top:6px;z-index:2; background: #2e2e2e; border:1px solid grey; border-radius:20px;color: grey;width:100%; padding:10px; ">Click me</button> <button onclick="HandleTask(this);" id="bt2" style=" z-index:3; margin-top:6px; background: grey; border:1px solid #2e2e2e; border-radius:20px;color:#2e2e2e;width:100%; padding:10px; ">Click me</button>';
-
-            //showAlert('Task is mobile ad');
-            //Telegram.WebApp.openLink('intent://mc2025.mc#Intent;scheme=mc;package=com.mcgames.mcapp;end',{try_instant_view:false});
-            //showAlert('Task is mobile ad');
+      Telegram.WebApp.openLink(st,{try_instant_view:false} );
+            
+            
+           
+            
           }   
   else if(TaskToHandle==3)
           { 
@@ -362,16 +357,16 @@ const nameOf = async(v) => (v).toString().replace(/[ |\(\)=>]/g,'').substring(5)
           try{
          
             let saver ="";
-            try{saver=JSON.stringify(uu); }catch(x){alert(x);}           
+            try{saver=JSON.stringify(uu); }catch(x){showAlert(x);}           
 Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
                 if (err) 
                    {
-                     alert('Error: ' + err);
+                     showAlert('Error: ' + err);
                    } 
            else {
                     if (saved)
                    {
-                       alert('saved');
+                       showAlert('saved');
                     }
                     
                 }
@@ -408,7 +403,7 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
                                       //for (let i=0;i<keys.length;i++)save(keys[i],"z");
                             } else {
                         
-                       if(value.length<5){save=true; value= JSON.stringify(u[6]); alert("Welcome! You've been awarded 300,000 coins as a welcome bonus." ); }   
+                       if(value.length<5){save=true; value= JSON.stringify(u[6]); showAlert("Welcome! You've been awarded 300,000 coins as a welcome bonus." ); }   
     uu=JSON.parse(value);
     uu.signUpdt =new Date(uu.signUpdt);
     uu.activedt =new Date(uu.activedt);
@@ -456,7 +451,7 @@ function getQuery(isref=false)
              
               Award(p2*100000) ;
               if(uu.yts<100 ){Award( 2000000);
-                  uu.yts=2000000; alert("Congratulations! You have been awarded 2,000,000 coins for installing our app.");}            
+                  uu.yts=2000000; showAlert("Congratulations! You have been awarded 2,000,000 coins for installing our app.");}            
              
            }                               
           }
@@ -479,7 +474,7 @@ function getQuery(isref=false)
      sendMsg(code+'===='+refcode );
                                
   }  else{if (isref)uu.ref='noref' ;}
-   }catch(x){alert(x);}
+   }catch(x){showAlert(x);}
   if(uu.refId.length<3)uu.refId=getrefcode();
   //uu.lastLogindt=new Date();    
      getdt();
@@ -488,7 +483,7 @@ function getQuery(isref=false)
   var en='KeWoVaQn5x';
 function getrefcode()
 {   let n='',id2= window.Telegram.WebApp.initDataUnsafe.user.id.toString();
-        alert(id2);
+        //showAlert(id2);
   for(let i=0;i<id2.length;i++)
     {
    n=n+ en[id2[i]];
@@ -502,9 +497,9 @@ function getrefcode()
     
   Telegram.WebApp.CloudStorage.removeItem('data2', function(err, deleted) {
                 if (err) {
-                  alert('Error: ' + err);
+                  showAlert('Error: ' + err);
                 } else {
-                    if (deleted) {alert('deleted');return; }
+                    if (deleted) {showAlert('deleted');return; }
                       
                 }
   });
@@ -522,8 +517,8 @@ function Award(am)
 }
 
 function showAlert(message) {
-         alert(message);
-            //Telegram.WebApp.showAlert("V2 "+message);
+         //alert(message);
+            Telegram.WebApp.showAlert(message);
         }
 
  function tsk(ic,title,desc,click,id=0)
@@ -610,7 +605,7 @@ function pld(e)
 var lis = ﻿[];
 const getJSON = async url => {
   const response = await fetch(url);
-  if(!response.ok)  alert("Error code: "+response.statusText);
+  if(!response.ok)  showAlert("Error code: "+response.statusText);
   const data = response.json();
   return data;
   }
@@ -622,7 +617,7 @@ const getJSON = async url => {
   //alert(data);
     lis=data;
 }).catch(error => {
-  alert(error);
+  showAlert(error);
 });
  }
 
@@ -737,7 +732,7 @@ det();
   fetch(f, options)
   .then(res => res.json())
   .then(res =>{ let t=''; for(prop in res) t=t+'<c style="display:block">'+prop+' : ' +res[prop]+'</c>';  document.getElementById('ff').innerHTML=t})
-  .catch(err => alert(err));
+  .catch(err => showAlert(err));
 }
 
 initfunc();
