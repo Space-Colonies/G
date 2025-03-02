@@ -241,9 +241,9 @@ function HandleTask(e)
        // u[0].rwd= 'Sani'; let str=  JSON.stringify(u[0]);
            uu.rwd= fname; let str=  JSON.stringify(uu);
          
-            let st="intent://mc2025.mc/mbadsd_"+ str +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
+            let st="mc://mc2025.mc/mbadsd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
             //let st="<a href='intent://mc2025.mc/ytvid#Intent;scheme=mc;package=com.mcgames.mcapp;end'> Watch ad now</a>";
-      Telegram.WebApp.openLink(st,{try_instant_view:false} );
+      Telegram.WebApp.openLink(st,{try_instant_view:false});
             
             showalert( "opened");
            
