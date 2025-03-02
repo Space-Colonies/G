@@ -610,7 +610,7 @@ const getJSON = async url => {
   return data;
   }
 
-  var a1="List34.json", fl=0, a2="List35.json", url2="https://dayib.github.io/Mtest/";
+  var a1="List34.json", fl=0, a2="List35.json", url2="https://sundayib.github.io/G/";
  async function glis(url)
 {
   getJSON(url).then(data => {
