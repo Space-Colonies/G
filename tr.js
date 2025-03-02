@@ -51,7 +51,7 @@ Telegram.WebApp.ready();
 
       document.getElementById('ic').innerHTML =fname[0];
      document.getElementById('nm').innerHTML ="Hi, "+fname;
-     document.getElementById('tc').innerHTML =id2; //"Task Coins : "+uu.TaskCoins;
+     document.getElementById('tc').innerHTML ="Task Coins : "+uu.TaskCoins;
                                                             
        
     }catch(er){showAlert(er);}              
@@ -237,7 +237,7 @@ function HandleTask(e)
           }   
    else if(TaskToHandle==2)
           { 
-                    ppp.style.display= "none";
+                    
        // u[0].rwd= 'Sani'; let str=  JSON.stringify(u[0]);
            uu.rwd= fname; let str=  JSON.stringify(uu);
          
@@ -245,7 +245,7 @@ function HandleTask(e)
             //let st="<a href='intent://mc2025.mc/ytvid#Intent;scheme=mc;package=com.mcgames.mcapp;end'> Watch ad now</a>";
       Telegram.WebApp.openLink(st,{try_instant_view:false} );
             
-            
+            showalert( "opened");
            
             
           }   
