@@ -474,7 +474,7 @@ function getQuery(isref=false)
      if(p2 != 'undefined')
     { 
       fl=p3; glis(url2+"List"+fl+".json"); movIndex =p4; 
-     ShowMovieList();scrl2(lis[p5].Hid); let urll= lis[p5].HLink.replace("dlmania","maniadl" );
+     ShowMovieList(); let i=Number(p5);scrl2(lis[i].Hid); let urll= lis[i].HLink.replace("dlmania","maniadl" );
       showAlert(urll); ldvid(urll);
      }           
  
