@@ -9,7 +9,7 @@ Array.from(circularProgress).forEach((progressBar) => {
   const innerCircle = progressBar.querySelector(".inner-circle");
   var endValue = Number(progressBar.getAttribute("data-percentage")),
     speed = 1000,
-    progressColor = "green";//progressBar.getAttribute("data-progress-color");
+    progressColor = "blue";//progressBar.getAttribute("data-progress-color");
 
   const progress = setInterval(() => {
     startValue++;
@@ -483,11 +483,11 @@ async function getQuery(isref=false)
       let url=url2+"List"+fl+".json";
     const response = await fetch(url);
   if(!response.ok)  showAlert("Error : "+response.statusText);
-  const data = response.json();
+  lis = response.json();
   
-    lis=data;
-      alert(data);
-      let i=Number(p5); showAlert(lis[i].HLink );let urll= lis[i].HLink.replace("dlmania","maniadl" );
+    
+      showAlert(lis[i].HLink);
+      let i=Number(p5); let urll= lis[i].HLink.replace("dlmania","maniadl" );
       showAlert(urll);    ldvid(urll);   movIndex =p4; ShowMovieList(); scrl2(lis[i].Hid);
       
      }           
