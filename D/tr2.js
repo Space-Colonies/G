@@ -474,22 +474,26 @@ async function getQuery(isref=false)
   }*/
         else if(Params.includes('reference' ))
   {
-    let [p1,p2,p3,p4,p5]=Params.split('_');
+    let [f1,f2,f3,f4,f5]=Params.split('_');
      
-     if(p2 != 'undefined')
+     if(f3 != 'undefined')
     { 
-      fl=p3; //setTimeout( tttoo(p4,p5),8000);
+      ppp.style.display= "none";
+     p1.style.display= "none";
+     p2.style.display= "none";
+     p3.style.display= "none";
+      fl=f3; //setTimeout( tttoo(p4,p5),8000);
       //glis(url2+"List"+fl+".json"); 
       let url=url2+"List"+fl+".json";
     const response = await fetch(url);
   if(!response.ok)  showAlert("Error : "+response.statusText);
   lis = response.json();
   
-    
+    alert(lis);
       alert(lis[10].HLink);
       //let i=Number(p5); 
       let urll= lis[10].HLink.replace("dlmania","maniadl" );
-      alert(urll);    ldvid(urll);   movIndex =p4; ShowMovieList(); scrl2(lis[9].Hid);
+      alert(urll);    ldvid(urll);   movIndex =f4; ShowMovieList(); scrl2(lis[9].Hid);
       
      }           
  
