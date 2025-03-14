@@ -478,9 +478,18 @@ function getQuery(isref=false)
      
      if(p2 != 'undefined')
     { 
-      fl=p3; setTimeout( tttoo(p4,p5),8000);
-      glis(url2+"List"+fl+".json"); 
-    
+      fl=p3; //setTimeout( tttoo(p4,p5),8000);
+      //glis(url2+"List"+fl+".json"); 
+      let url=url2+"List"+fl+".json";
+    getJSON(url).then(data => {
+ //alert(data);
+    lis=data;//movieindex=0;ShowMovieList(); 
+}).catch(error => {
+  showAlert(error);
+});
+      
+      let i=Number(p5); showAlert(lis[i].HLink );let urll= lis[i].HLink.replace("dlmania","maniadl" );
+      showAlert(urll);    ldvid(urll);   movIndex =p4; ShowMovieList(); scrl2(lis[i].Hid);
       
      }           
  
@@ -633,7 +642,7 @@ function pld(e)
 var lis = ﻿[];
 const getJSON = async url => {
   const response = await fetch(url);
-  if(!response.ok)  showAlert("Error code: "+response.statusText);
+  if(!response.ok)  showAlert("Error : "+response.statusText);
   const data = response.json();
   return data;
   }
