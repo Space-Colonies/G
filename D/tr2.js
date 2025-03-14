@@ -668,7 +668,7 @@ function get(url){
     
     
     
-    var temp = '<div id="fr" class="frame">'
+    var temp = '<div id='+ Hid+' class="frame">'
         +'<div id="tit" style="font-size:5vh; margin: 20px"> '+tit+'</div>'
  //+'<img src='+img+ ' style="height: 50vh; width:38vh;"/>'
  +'<div id="len"style="font-size:4vh"> Duration : '+len+ '</div>'
