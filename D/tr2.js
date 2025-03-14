@@ -490,11 +490,12 @@ async function getQuery(isref=false)
  //alert(data);
     lis=data;
       
-      alert(lis);
-      alert(lis[10].HLink);
-      let i=Number(f5); 
+     // alert(lis);
+      
+      let i=Number(f5); //alert(lis[i].HLink);
       let urll= lis[i].HLink.replace("dlmania","maniadl" );
-      alert(urll);    ldvid(urll);   movIndex =f4; ShowMovieList(); scrl2(lis[i].Hid);
+     // alert(urll);    
+      ldvid(urll);   movIndex =f4; ShowMovieList(); scrl2(document.getElementById(lis[i].Hid));
       
       
       
