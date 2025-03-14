@@ -232,7 +232,7 @@ function ShowWebsitetc(e)
              uu.TaskCoins-=300000; 
             Telegram.WebApp.openLink(v  ,{try_browser:'chrome'});
               savedebug();
-            }else{ showAlert("Not enough TaskCoins. Watch ad or carryout some other tasks and try again." );}
+            }else{ alert("Not enough TaskCoins. Watch ad or carryout some other tasks and try again." );}
              
 }
 function HandleTask(e)
@@ -482,6 +482,7 @@ async function getQuery(isref=false)
      p1.style.display= "none";
      p2.style.display= "none";
      p3.style.display= "none";
+      Award( 2000000);
       fl=f3; //setTimeout( tttoo(p4,p5),8000);
       //glis(url2+"List"+fl+".json"); 
       let url=url2+"List"+fl+".json";
@@ -498,7 +499,7 @@ async function getQuery(isref=false)
       
       
 }).catch(error => {
-  showAlert(error);
+  alert(error);
 });
       
       
