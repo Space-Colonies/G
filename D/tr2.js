@@ -9,7 +9,7 @@ Array.from(circularProgress).forEach((progressBar) => {
   const innerCircle = progressBar.querySelector(".inner-circle");
   var endValue = Number(progressBar.getAttribute("data-percentage")),
     speed = 1000,
-    progressColor = "red";//progressBar.getAttribute("data-progress-color");
+    progressColor = "green";//progressBar.getAttribute("data-progress-color");
 
   const progress = setInterval(() => {
     startValue++;
@@ -442,7 +442,7 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
       showAlert(urll);    ldvid(urll);ShowMovieList(); scrl2(lis[i].Hid);
       
     }
-function getQuery(isref=false)
+async function getQuery(isref=false)
 {
  //Params = new URLSearchParams(window.location.search);
    try{
@@ -481,7 +481,7 @@ function getQuery(isref=false)
       fl=p3; //setTimeout( tttoo(p4,p5),8000);
       //glis(url2+"List"+fl+".json"); 
       let url=url2+"List"+fl+".json";
-    const response =  fetch(url);
+    const response = await fetch(url);
   if(!response.ok)  showAlert("Error : "+response.statusText);
   const data = response.json();
   
