@@ -590,8 +590,23 @@ function Award(am)
 
 function showAlert(message) {
          //alert(message);
-            Telegram.WebApp.showAlert( 'GCoin',message);
-        }
+          //  Telegram.WebApp.showAlert( 'message);
+  
+  Telegram.WebApp.showPopup({
+                title  : 'GCoin',
+                message: message,
+                buttons: [
+                    
+    {id: 'faq', type: 'default', text: 'Ok'},
+                    {type: 'cancel'},
+                ]
+            }, function (buttonId) { }
+  );
+  
+  
+  
+  
+}
 
  function tsk(ic,title,desc,click,id=0)
 {
