@@ -36,10 +36,10 @@ async function initfunc()
      
 Telegram.WebApp.ready(); 
       await lditemsdebug();   
-      Telegram.WebApp.themeParams.text_color= '#3e3e3e';
-      Telegram.WebApp.setHeaderColor('#101010');
-      Telegram.WebApp.setBottomBarColor('#101010');
-      Telegram.WebApp.setBackgroundColor('#101010');
+      Telegram.WebApp.themeParams.text_color= '#4e4e4e';
+      Telegram.WebApp.setHeaderColor('#1a1a1a');
+      Telegram.WebApp.setBottomBarColor('#1a1a1a');
+      Telegram.WebApp.setBackgroundColor('#1a1a1a');
           
      Telegram.WebApp.disableVerticalSwipes(); 
      //initData= Telegram.WebApp.initData;    
@@ -277,13 +277,13 @@ function closeOptions(){ appotions.style.display='none';}
           { 
                     //Telegram.WebApp.openLink('https://sundayib.github.io/P/',{try_instant_view:false});
             //link2open='https://mcoin2025.github.io/Apps/Downloads/';
-            Telegram.WebApp.openTelegramLink('https://t.me/english_movies_downloader');
+            Telegram.WebApp.openTelegramLink('https://t.me/gumauchannel');
               return;
           }   
   else if(TaskToHandle==4)
           { if(!uu.others.includes('grp')){uu.others=uu.others+ 'grp'; uu.TaskCoins +=100000;savedebug();}
             
-         Telegram.WebApp.openTelegramLink('https://t.me/+uTcCa4tBrDlkZWM0');
+         Telegram.WebApp.openTelegramLink('https://t.me/gumaucoin');
               
             
                 return;
@@ -299,7 +299,7 @@ function closeOptions(){ appotions.style.display='none';}
     else if(TaskToHandle==6)
             { 
               if(!uu.others.includes('chch')){ uu.others=uu.others+ 'chch'; uu.TaskCoins +=100000;savedebug();}
-             Telegram.WebApp.openTelegramLink('https://t.me/english_movies_downloader');
+             Telegram.WebApp.openTelegramLink('https://t.me/gumauchannel');
             
                
               return;
@@ -331,8 +331,9 @@ function closeOptions(){ appotions.style.display='none';}
    else if(TaskToHandle==2)
           { 
                     
-            link2open='https://t.me/moviecoingroup';
-            
+            //link2open='https://t.me/gumaucoin';
+            Telegram.WebApp.openTelegramLink('https://t.me/gumauchannel');
+              return;
           }  
         else if(TaskToHandle==5)
           { 
@@ -346,7 +347,8 @@ function closeOptions(){ appotions.style.display='none';}
           }   
             
           }
-  appotions.style.display='flex';
+ // appotions.style.display='flex';
+  openApp(1);
   ppp.style.display= "none";
 }
 
@@ -639,8 +641,8 @@ function showAlert(message) {
   document.getElementById("p2").innerHTML="";
   
   tsk('F','Frens Invite','Invite frens to earn unlimited $Gumau','showinvite');
-  tsk('A','Android App',' Download our app','Showapp');
-  tsk('G','TG Group ','Join our TG group to earn 100,000 $Gumau','Showtg');
+  tsk('A','Android App',' Download app from channel','Showapp');
+  tsk('G','TG Group ','Join TG group to earn 100,000 $Gumau','Showtg');
   tsk('C','TG Channel','Subscribe to Telegram channel to earn $Gumau','Showtc');
   tsk('M','Mobile ads view','View ads to earn $Gumau ','ShowAd');
   tsk('Y','YouTube Vids','Earn 300,000 $Gumau per YT video watched','Showyt');
