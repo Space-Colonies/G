@@ -9,13 +9,13 @@ Array.from(circularProgress).forEach((progressBar) => {
   const innerCircle = progressBar.querySelector(".inner-circle");
   var endValue = Number(progressBar.getAttribute("data-percentage")),
     speed = 1000,
-    progressColor = "#2e2e2e";
+    progressColor = "grey";
   const progress = setInterval(() => {
     startValue++;
     progressValue.textContent = startValue;
     progressValue.style.color = progressColor;
 
-    innerCircle.style.backgroundColor = "#1a1a1a";
+    innerCircle.style.backgroundColor = "#2e2e2e";
     progressBar.style.background = 'conic-gradient('+progressColor +','+startValue * (360/endValue)+'deg,#3e3e3e 0)';
     
     /*progressBar.style.background = 'conic-gradient(${progressColor} ${
@@ -36,10 +36,10 @@ async function initfunc()
      
 Telegram.WebApp.ready(); 
       await lditemsdebug();   
-      Telegram.WebApp.themeParams.text_color= '#4e4e4e';
-      Telegram.WebApp.setHeaderColor('#1a1a1a');
-      Telegram.WebApp.setBottomBarColor('#1a1a1a');
-      Telegram.WebApp.setBackgroundColor('#1a1a1a');
+      Telegram.WebApp.themeParams.text_color= '#2e2e2e';
+      Telegram.WebApp.setHeaderColor('#2e2e2e');
+      Telegram.WebApp.setBottomBarColor('#2e2e2e');
+      Telegram.WebApp.setBackgroundColor('#2e2e2e');
           
      Telegram.WebApp.disableVerticalSwipes(); 
      //initData= Telegram.WebApp.initData;    
@@ -618,8 +618,8 @@ function showAlert(message) {
   this.click=click;
   this.id=id;
   
-  let txt='Go',col= ' #4e4e4e';
-  if(click.length <2) {txt='done';col=' #4e4e4e';}
+  let txt='Go',col= ' grey';
+  if(click.length <2) {txt='done';col=' grey';}
  let temp=  '<div class="ncontainerT">'
   +'<div class="dv1" >'
             +'<div class="dv2">'+ic +'</div>'
@@ -719,10 +719,10 @@ function get(url){
  //+'<img src='+img+ ' style="height: 50vh; width:38vh;"/>'
  +'<div id="len"style="font-size:4vh"> Duration : '+len+ '</div>'
       +'<div id="des"style="font-size: 3vh; margin-left: 20px; margin-right: 20px"> DESCRIPTION :'+ des +' </div>'
-     +'<button class="bt3" style="color:  #4e4e4e;background: #101010;border:1px solid  #4e4e4e;" onclick="shareMovie(this);" id="share" name= '+Hid+'>Share Video </button>'
+     +'<button class="bt3" style="color:  grey;background: #101010;border:1px solid  grey;" onclick="shareMovie(this);" id="share" name= '+Hid+'>Share Video </button>'
   
-  +'<button class="bt3" style="color:  #4e4e4e;background: #101010;border:1px solid  #4e4e4e;" onclick="showmovie(this);" id='+hre+' name= '+Hid+'>Watch or download ('+hsi+')</button>'
-  +'<button class="bt3" style="color: #101010;background:  #4e4e4e;border:1px solid  #4e4e4e;" onclick="showmovie(this);" id='+lre+' name= '+Lid+'>Watch or download ('+lsi+')</button>'
+  +'<button class="bt3" style="color:  grey;background: #101010;border:1px solid  grey;" onclick="showmovie(this);" id='+hre+' name= '+Hid+'>Watch or download ('+hsi+')</button>'
+  +'<button class="bt3" style="color: #101010;background:  grey;border:1px solid  grey;" onclick="showmovie(this);" id='+lre+' name= '+Lid+'>Watch or download ('+lsi+')</button>'
   
   +'</div>';
         let b=document.getElementById("p3content").innerHTML +temp;
