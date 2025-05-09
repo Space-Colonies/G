@@ -36,9 +36,9 @@ async function initfunc()
      
 Telegram.WebApp.ready(); 
       await lditemsdebug();   
-      Telegram.WebApp.themeParams.text_color= '#2e2e2e';
-      Telegram.WebApp.setHeaderColor('#2e2e2e');
-      Telegram.WebApp.setBottomBarColor('#2e2e2e');
+      Telegram.WebApp.themeParams.text_color= '#4e4e4e';
+      Telegram.WebApp.setHeaderColor('#4e4e4e');
+      //Telegram.WebApp.setBottomBarColor('#2e2e2e');
       Telegram.WebApp.setBackgroundColor('#2e2e2e');
           
      Telegram.WebApp.disableVerticalSwipes(); 
@@ -160,7 +160,7 @@ function pageld(e){
 function showinvite(e)
 {
           TaskToHandle= 5;TaskId="";
-          msg='Get unlimited $Gumau inviting as many frens as you can. Each invite earns you 100,000 $Moviz per new user. You can copy your referral link below.';
+          msg='Get unlimited $Gumau inviting as many frens as you can. Each invite earns you 1,000,000 $Gumau per new user. You can copy your referral link below.';
     document.getElementById('bt1').innerHTML ='Copy referal link to clipboard';
     document.getElementById('bt2').innerHTML ='Share referral link';          
     document.getElementById('pop').innerHTML =msg;
@@ -269,7 +269,7 @@ function closeOptions(){ appotions.style.display='none';}
 
             //let str= JSON.stringify(uu);
          savedebug();
-            let st="https://movizbot.github.io/a/?action="+ "mbadsd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
+            let st="https://gumaucoin.github.io/d/?action="+ "mbadsd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
             //let st="<a href='intent://mc2025.mc/ytvid#Intent;scheme=mc;package=com.mcgames.mcapp;end'> Watch ad now</a>";
       link2open=st;closeapp=true;
           }   
@@ -312,7 +312,7 @@ function closeOptions(){ appotions.style.display='none';}
 
             //let str= JSON.stringify(uu);
          savedebug();
-            let st="https://movizbot.github.io/a/?action=ytvidd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
+            let st="https://gumaucoin.github.io/d/?action=ytvidd_"+ str;// +"#Intent;scheme=mc;package=com.mcgames.mcapp;end";
            link2open=st; closeapp=true;
           }   
           else
@@ -438,7 +438,7 @@ Telegram.WebApp.CloudStorage.setItem('data2', saver, function(err, saved) {
                                       //for (let i=0;i<keys.length;i++)save(keys[i],"z");
                             } else {
                         
-                       if(value.length<20){save=true; value= JSON.stringify(u[0]); showAlert("Welcome! You've been awarded 1,000,000 $Moviz as a welcome bonus." ); }   
+                       if(value.length<20){save=true; value= JSON.stringify(u[0]); showAlert("Welcome! You've been awarded 1,000,000 $Gumau as a welcome bonus." ); }   
     uu=JSON.parse(value);
     uu.signUpdt =new Date(uu.signUpdt);
     uu.activedt =new Date(uu.activedt);
@@ -490,9 +490,9 @@ async function getQuery(isref=false)
            {
              //alert('awarded');
               Award(p2*100000) ;
-             if(p1.includes(  "ytvid"))showAlert("You've earned "+(p2*100000)+ "$Moviz for watching a video. " );else showAlert("You've earned "+(p2*100000)+ "$Moviz for watching ads." );
+             if(p1.includes(  "ytvid"))showAlert("You've earned "+(p2*100000)+ "$Gumau for watching a video. " );else showAlert("You've earned "+(p2*100000)+ "$Gumau for watching ads." );
               if(uu.yts<100 ){Award( 2000000);
-                  uu.yts=2000000; showAlert("Congratulations! You have been awarded 2,000,000 $Moviz for installing our app.");}            
+                  uu.yts=2000000; showAlert("Congratulations! You have been awarded 2,000,000 $Gumau for installing our app.");}            
              
            } else  showAlert("To get rewarded for a task, you need to start it from the task section. ");                             
           }
@@ -561,7 +561,7 @@ async function getrefcode(url=true)
    n=n+ en[id2[i]];
     }
   let res= '';
-  if(url)res='http://t.me/movizcoin_bot/moviz?startapp=reference_' + n;
+  if(url)res='https://t.me/Gumau_bot/Gumau?startapp=reference_' + n;
   else res=n;
   return res;
 }
