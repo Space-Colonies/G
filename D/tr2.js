@@ -115,7 +115,7 @@ function pageld(e){
      {
      ppp.style.display= "none";
      p1.style.display= "none";
-     p2.style.display= "flex";
+     p2.style.display= "block";
      p3.style.display= "none";
        header.textContent="FREQUENTLY ASKED QUESTIONS";
        scrl2(p2);
@@ -657,7 +657,19 @@ var titles=[ 'one', 'two', 'three', 'four', 'five', 'six', 'seven ', 'eight ', '
 
  function setpg()
 {
-  document.getElementById("p2").innerHTML= ' <div class="ncontainerabt" style="padding:80px 10px ">1. Am I required to make any deposit or pay for gas fee before airdrop? </br>No, you only need to participate in carrying out tasks. </br> 2. How much time will Gumau cost me? </br> It will cost you around 7 to 15 minutes a day if you were to watch at least 10 mobile ads. </br> 3.Am I required to login daily, weekly or monthly? </br> You are required to carry out at least one task every 30 days to keep your farm bot active failure to which your bot $Gumau will be cleared but your task $Gumau will remain unaffected. </br>4. For how long do I have to participate before getting qualified for airdrop? </br>There is no time frame but the longer you participate,the better the chance of bigger airdrop. You can also widthraw your earnings at every month end. </br> 5. What is the value of Gumau? </br> That ' + "can't"+ ' be estimated at the moment but at every month end, a value will be estimated for the sake of the people who may want to widthraw their earnings. </br>6. How long is mining going to last for? </br> Most likely before the end of 2025 but it all depend on the number of active users we have. For example less than 100,000 active users may take about a year ; 100,000 to 200,000 may take about 7 months; 400,000 and beyond may take about 4 to 5 months but this timeline is not guaranteed.  </br>7. Is Gumau backed by any investment? </br>Not at the moment, GCoin rely on revenue generated mostly from ads. However, GCoin is working hard to attract investors.  </br>8. How much should I be expecting? </br> That cannot be estimated for now. </br>9. What is the easiest way to earn Gumau? The easiest way is through referral which gives you 100,000 $Gumau for every new user that uses your referral link. </br>10. When did farming begin? Farming began in May, 2025.</div>';
+  document.getElementById("p2").innerHTML= 
+  '<f>Where are you going to get the money to pay us? </br> Every time you watch ads, the advertizer pays a certain amount of money and I serve as a broker (middle man) between you and the advertizer. When the total ads watched through my app reached a certain threshold, I would be able to widthraw the payment from such ads by the end of the month and send you your earnings as a user.</f> '
+  +'<f> Am I required to make any deposit or pay for gas fee before airdrop? </br>No, you only need to participate in carrying out tasks. </br> </f> '
+  +'<f> How much time will Gumau cost me? </br> It will cost you around 7 to 15 minutes a day if you were to watch at least 10 mobile ads. </br></f>'
+   +'<f>Am I required to login daily, weekly or monthly? </br> You are required to carry out at least one task every 30 days to keep your farm bot active failure to which your bot $Gumau will be cleared but your task $Gumau will remain unaffected. </br> </f>' 
+  +'<f> For how long do I have to participate before getting qualified for airdrop? </br>There is no time frame but the longer you participate,the better the chance of bigger airdrop. You can also widthraw your earnings at every month end without any minimum withdrawal limit. You can withdraw your earnings even if it were just ten ads you watched for the month.</br></f>'
+   +'<f>What is the value of Gumau? </br> That ' + "can't"+ ' be estimated at the moment but at every month end, a value will be estimated for the sake of the people who may want to widthraw their earnings. </br> </f>' 
+  +'<f>How long is mining going to last for? </br> Most likely before the end of 2025 but it all depend on the number of active users. For example less than 100,000 active users may take about 8 months ; 100,000 to 200,000 may take about 6 months; 400,000 and beyond may take about 3 to 4 months but this timeline is not guaranteed.  </br> </f>'
+   +'<f>Is Gumau backed by any investment? </br>Not at the moment, GCoin rely on revenue generated mostly from ads. However, GCoin is working hard to attract investors.  </br> </f> '
+  +'<f> How much should I be expecting? </br> That cannot be estimated for now. </br></f>'
+   +'<f>What is the easiest way to earn Gumau?</br> The easiest way is through referral which gives you 1,000,000 $Gumau for every new user that uses your referral link. </br>NOTE: After reaching one thousand users, referral reward will drop down to 100,000 per new user. </f>'
++'<f> When did farming begin? Farming began May 15, 2025.</f>'
+  +'<f>I have been scammed before wasting my valuable time on mining without payout. How do I know this is not another scam?</br> You can start by investing just seven to fifteen minutes of your time to watch just ten ads and wait for the end of the month to see if you would get paid for those ten ads or not.</f>';  
   
 }
 
